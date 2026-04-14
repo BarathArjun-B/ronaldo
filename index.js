@@ -9,7 +9,7 @@
 //let x=123;
 
 //console.log(x)
-/*let name = " arjun ";
+/*let name =
 let age = 25;
 let price = 10.99;
 let gpa=6.67;

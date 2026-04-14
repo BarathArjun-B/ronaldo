@@ -1,0 +1,140 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #0f172a;
+  color: white;
+}
+
+/* NAVBAR */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background: #020617;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #22c55e;
+}
+
+.logo {
+  color: #22c55e;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+/* HERO */
+.hero {
+  position: relative;
+  height: 70vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  background: url("cr.jpeg") no-repeat center;
+  background-size: cover;
+
+  /* 🔥 IMPORTANT: Push image UP (fix face overlap) */
+  background-position: center 0%;
+}
+
+/* GRADIENT OVERLAY (MATCHES WEBSITE COLOR) */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    to bottom,
+    rgba(2, 6, 23, 0.7) 0%,
+    rgba(2, 6, 23, 0.85) 40%,
+    rgba(15, 23, 42, 1) 100%
+  );
+
+  z-index: 1;
+}
+
+/* HERO CONTENT */
+.hero-content {
+  position: relative;
+  z-index: 2;
+
+  /* 🔥 Push text slightly DOWN */
+  margin-top: 50px;
+}
+
+/* TEXT */
+.hero h2 {
+  font-size: 38px;
+  margin-bottom: 15px;
+  text-shadow: 0 0 12px rgba(0, 0, 0, 0.9);
+}
+
+.hero p {
+  margin-bottom: 20px;
+  color: #cbd5f5;
+  font-size: 16px;
+}
+
+/* BUTTON */
+.hero button {
+  padding: 10px 24px;
+  border: none;
+  background: #22c55e;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+.hero button:hover {
+  background: #16a34a;
+  transform: scale(1.05);
+}
+
+/* FEATURES */
+.features {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+
+  padding: 40px;
+  margin-top: -40px;
+}
+
+/* CARDS */
+.card {
+  background: #020617;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 15px rgba(34, 197, 94, 0.3);
+}

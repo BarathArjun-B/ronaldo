@@ -12,9 +12,9 @@ git commit -m "Initial commit of cr7"
 
 for i in {1..10}
 do
-  echo "// Auto comment update $i: $(date)" >> index.js
-  git add index.js
-  git commit -m "docs: Automate comment update $i in index.js"
+  echo "<!-- Auto update $i: $(date) -->" >> README.md
+  git add README.md
+  git commit -m "docs: Automate update $i in README.md"
 done
 
 git push -u origin main
